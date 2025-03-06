@@ -1,0 +1,56 @@
+MTD COMPETATIVE TRAINING 
+
+DAY1 THURSDAY 06-03-2025
+
+IMPORTANT GIT COMMANDS
+
+https://github.com/RakshitaPKandlur/mtd_c_py
+//My Repo
+
+$ git status 
+//To know current status of our Repo 
+
+$ git clone <URL>
+//To download a Repo
+
+git clone https://github.com/neelmyna/vvce_mar25
+// Example to download the Repo
+
+$ git pull origin main
+//Command to download the updated Repo from the server(remote) to the local machine
+
+To make our computer recognize our git account , we must run these 2 configuration commands:
+
+$ git config --global user.name "RakshitaPKandlur"
+$ git config --global user.email "rakshitakandlur7@gmail.com"
+
+STEPS TO CREATE A NEW PAT IN GITHUB: 
+
+Login to github 
+Right top corner Click on your profile 
+Scroll down and click settings 
+Next window, scroll down , on left bottom corner , click developer settings 
+Next window , Click on Generate new token button and select Token classic 
+(Now u may be asked to enter password)
+Next , Add a note for the new PAT we are creating 
+Select Expiry -> No expiration 
+Select the Top check box named REPO
+Scroll down fully 
+
+Now, let us Sync our Remote Repo with Local Repo 
+In other words, we are going to CLONE OUR Repo using the PAT 
+
+By doing so , we can perform Read-Write operations on our Remote Repo without having to Authrnticatr everytime.
+
+$ git clone https://<PAT>@github.com/RakshitaPKandlur/mtd_c_py
+
+Commands required to upload files from local Repo to Remote :
+
+$ git add .
+//Git will mark all the files that need to be updated 
+
+$ git commit -m "notes file of the mtd tarining is added"
+//Git creates an object thatwill include all the files to be uploaded and also it is secured (encripted) 
+
+$ git push origin main 
+//The object now is send to the server(the remote repo is updated)
