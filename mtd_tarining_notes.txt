@@ -47,10 +47,353 @@ $ git clone https://<PAT>@github.com/RakshitaPKandlur/mtd_c_py
 Commands required to upload files from local Repo to Remote :
 
 $ git add .
-//Git will mark all the files that need to be updated 
+//Git will marked(staged) all the files that need to be updated 
 
 $ git commit -m "notes file of the mtd tarining is added"
 //Git creates an object thatwill include all the files to be uploaded and also it is secured (encripted) 
 
 $ git push origin main 
 //The object now is send to the server(the remote repo is updated)
+
+cls
+//To clear 
+
+$ git pull origin main
+
+
+int num = -21
+-21
+21
+0001 0101
+1110 1010
+1110 1011
+-1*2(7) + -1*2(6) + -1*2(5)+11
+-128 + 64 + 32 + 11
+-64 + 43
+-21
+
+by default all numbers are signed 
+
+int num;
+signed int num;
+
+------------------------------------------------------
+C - Type liberal Language
+JAVA - Type strict Language 
+------------------------------------------------------
+
+TYPE CASTING
+
+float num = 11 / 3;
+printf("%f", num);
+Implicit up casting [int to float]{3 to 3.0} 
+Output is 3.000000
+
+int num = 11 / 3.0;
+printf("%d", num);
+Implicit up casting [int to double]{11 to 11.0} 
+Output is 3.666667
+3.666667 is converted to int [double to int] -> Implicit down casting
+
+int num = (int)11.5f / 2.0;
+printf("%d", num);
+11.5f to 11 (float to int) Explicit down casting
+11/2.0
+11 to 11.0 (int to double) Implicit up casting
+5.5 
+5.5 to 5 (double to int) Implicit down casting
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+DAY2 FRIDAY 07-03-2025
+
+ARITHMETIC OPERATORS  : + - * / % [ All are binary operators as they only need 2 Operands ]
+I/P are numbers 
+O/P is number
+Used with Infix Notation 
+To perform any arithmetic operation, DT of both the operands must be same
+Left to Right associativity w.r.t reading the values/expression
+For the calculations to happen, the user/programmer given infix expression must be converted to postfix.
+The operators have differnt hieracrchy/precedence/priority
+
+fflush(stdin); - It flush outs the buffer 
+
+-----------------------------------------------------
+
+RELATION OPERATORS : < > == != >= <= 
+I/P are numbers 
+O/P is Bolean [True/False]
+Used with Infix Notation 
+Left to Right associativity w.r.t reading the values/expression
+
+for int i = 1; i <= 10; i++
+for int i = 1; i < 11; i++
+
+[10,20] : Close Interval
+num >= 10 and num <= 20
+ 
+(10,30) : Open Interval
+num > 10 and num < 30
+
+[10,40) -> Right Open Interval
+
+------------------------------------------------------
+
+LOGICAL OPERATORS : &(AND) &&(Short Circuiting AND) |(OR) ||(Short Circuiting OR) !(NOT) 
+
+I/P are Bolean 
+O/P is Bolean [True/False]
+
+int n = 10;
+printf("%d %d %d %d", n--, ++n, --n, n--, )
+
+------------------------------------------------------
+
+IMPORTANT PROGRAM
+
+#include<stdio.h>
+int main() {
+    int a = 13, b = 2, c = -8;
+    if(a <= b & ++b != --c || a < c++)
+        puts("Tadiamdamol");
+    else 
+        puts("Pushpagiri");
+    printf("%d %d %d \n", a,b,c);// 
+
+}
+OUTPUT : Pushpagiri
+		 13 3 -8 
+
+-------------------------------------------------------
+ 
+5 STEPS TO SOLVE PROBLEM
+ 
+1. Understand the problem. Recognise the input data and the relavent information. Isolate the unwanted data and info. Recognize the O/P.
+2. Find the solution(s) with all possible ways, trail and erroe method, applying an algorithm etc.
+3. Write down the algorithm 
+	Step by step procedure to solve the problem.
+	Each step must be Atomic (SRP), simple and finite.
+4. Write the Fake code(psuedocode).
+5. Code it
+ 
+Check if the number (+ve integer) is Perfect Square.
+ 
+1. Read I/P numbner say N.
+2. ROOT = (INTEGER)squareRoot(N)
+3. If ROOT * ROOT == N then 
+	print N is PS
+   else 
+	print N is not PS
+4.
+5.  
+ 	
+| Round |
+| Seal  |
+| Floor |
+  
+averageScore   ->  Camel case (C)
+average_score  ->  Snake case (Python)
+AverageScore   ->  Pascal case 
+  
+RAKSHITA - Upper case
+Rakshita - Capital
+ 
+Prototype of 10 sqrt(100) is -> double sqrt(double);
+
+-------------------------------------------------------
+
+Find Nth term of the series : 1 2 2 3 3 5 5 7 8 11 13 13 _?_
+
+Odd terms: Fibo series (N+1)/2 th fibo term is the Nth
+Even terms: Prime numbers N/2th Prime term
+
+Algorithm :- 
+Read N 
+if N % 2 == 0:
+	findPrimeTerm(N/2)
+else
+	findFiboTerm((N+1)/2)
+---------------------------------------------------------
+#include<stdio.h>
+#include<math.h>
+int main() {
+int n1 = 89;
+int n2 = 067;
+int n3 = 0x99;
+
+printf("%d %i %o %x \n", n1, n1, n1, n1); // 89 89 131 59
+printf("%d %i %o %x \n", n2, n2, n2, n2); // 55 55 67 37
+printf("%d %i %o %x \n", n3, n3, n3, n3); // 153 153 231 99 
+
+}
+----------------------------------------------------------
+
+int inum = 12345;
+float fnum = 74.916f;
+char str[32] = "mysooru";
+
+printf("%d \n", inum); //12345
+printf("%7d \n", inum); //___12345
+printf("%3d \n", inum); //12345
+printf("%-8d \n", inum); //12345___
+printf("%07d \n", inum); //0012345
+printf("%-07d \n", inum); //12345
+
+-----------------------------------------------------------
+
+#include <stdio.h>
+int main() {
+    int inputNumber,i = 0;
+    puts("Enter a number to print it's Math table:");
+    scanf("%d",&inputNumber);
+    printf("Math table of %d:\n",inputNumber);
+    for(i = 1; i <= 10; i++)
+        {
+            printf("%d * %02d = %03d\n", inputNumber, i, inputNumber*i);
+        }
+        return 0;
+}
+
+OUTPUT :-
+
+Enter a number to print it's Math table:
+13
+Math table of 13:
+13 * 01 = 013
+13 * 02 = 026
+13 * 03 = 039
+13 * 04 = 052
+13 * 05 = 065
+13 * 06 = 078
+13 * 07 = 091
+13 * 08 = 104
+13 * 09 = 117
+13 * 10 = 130
+---------------------------------------------------------
+Find second smallest digit in th given number.
+
+6579846
+35
+8
+
+789
+24
+6
+
+Loop inside a loop (inner loop : 1/2 iterations only) (outer loop : given number = no. of iterations )
+Solve this problem using only one loop.
+
+while loop     ->  Entry controlled loop (may run / may not run)  
+do while loop  ->  Atleast once it should be run
+
+untile N has digits Do.
+	set reminder digit(RD) r=N%10
+	add RD to sum r=r+rd
+	remove the RD from N 
+	if N is zero and 
+	sum > 9
+	N = sum
+	sum =0
+sum = 0
+N = 765
+N is > 0
+i = 1 
+	RD = 5 
+	sum = 0 + 5 = 5
+	N = 765 / 10 = 76
+N is > 0
+i = 2
+	RD = 76 % 10 = 6 
+	sum = 5 + 6 = 11
+	N = 76 / 10 = 7
+N is > 0
+i = 3 
+	RD = 7 % 10 = 7 
+	sum = 11 + 7 = 18
+	N = 7 / 10 = 0
+N = 18
+sum = 0
+i = 4 
+	RD = 18 % 10 = 8 
+	sum = 0 + 7 =8
+sum > 9
+N = sum
+i = 5 
+	RD = 1 % 10 = 1 
+	sum = 8 + 1 = 9
+	N = 0
+	
+----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
+
+DAY3 SATURDAY 08-03-2025
+
+switch case restaurant app
+
+	-----> Veg :-
+	^			1
+	|			2
+	|			3
+	|			4    ---> 
+	|			.			---> Stop
+	|			.				|
+	|			.				|	
+	|	-> Non - Veg :-			|
+	|				1			|	
+	|				2			|
+	|				3			|
+	|				4			|
+	|				.			|
+	|				.			|
+	|				.			|
+	 ---------------------------
+	
+main() ---> startApp()				runMenu() 			f1()		f2()		f3()
+			{						{					{			{			{
+				runMenu()				f1()			...			...			...
+			}							f2()			}			}			}
+										f3()
+									}
+--------------------------------------------------------------------------------------
+
+POINTERS
+
+& Operator:
+		"Address of" Opertaor
+It can be applied only to a variable, including a pointer, because a pointer is also variable.
+
+* Operator:
+		"Value At" or "Defenc
+
+int num = 20;     int*var = &num;		int**ptr = &var;
+					int* = int*
+
+
+		num	    <----	var			<-----	ptr
+ int  ------		   -------  int*	   ------  int**
+	 |		|		  |		  |  		  |		 |
+ int |  20	|		x | value | int*	  |	3331 | int**
+ int |		|		x*|	1101  |			  |		 |
+	  ------		   -------             ------
+ int* 1101		   		3331	int**		5501   int***
+						
+						
+*(&num)
+= value at [address ]
+
+--------------------------------------------
+Find the sum of digits of a number using Recursion
+
+call_function(number)
+	 
+
+	
+Read N 
+if number is zero, print zero 
+	print zero as result 
+else 
+	call_function(N)
+	
+	
+	
